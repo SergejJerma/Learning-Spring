@@ -53,23 +53,14 @@
                 </#if>
             </div>
         </div>
-       
-      <div class="col-sm-6">
-        <div class="g-recaptcha" data-sitekey="6Ld_E8QUAAAAAHgkrsbvAqZzMVk23mGv4M_PNOOX"></div>
-        </div><#if captchaError??>
+        <div class="col-sm-6">
+            <div class="g-recaptcha" data-sitekey="6LduQVoUAAAAAD8hypySNroht_6UnzhoQRV3QIWc"></div>
+            <#if captchaError??>
                 <div class="alert alert-danger" role="alert">
                     ${captchaError}
                 </div>
             </#if>
         </div>
-        
-     <form action="?" method="POST">
-      <div class="g-recaptcha" data-sitekey="6Ld_E8QUAAAAAHgkrsbvAqZzMVk23mGv4M_PNOOX"></div>
-      <br/>
-      <input type="submit" value="Submit">
-    </form>
-
-        
     </#if>
     <input type="hidden" name="_csrf" value="${_csrf.token}" />
     <#if !isRegisterForm><a href="/registration">Add new user</a></#if>
@@ -80,6 +71,6 @@
 <#macro logout>
 <form action="/logout" method="post">
     <input type="hidden" name="_csrf" value="${_csrf.token}" />
-    <button class="btn btn-primary" type="submit">Sign Out</button>
+    <button class="btn btn-primary" type="submit"><#if user??>Sign Out<#else>Log in</#if></button>
 </form>
 </#macro>
