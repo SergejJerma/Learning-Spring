@@ -39,4 +39,10 @@ public class MainController {
 	model.addAttribute("list", list);
 		return "input";
 	}
+	
+	@GetMapping("/history")
+	public String showHistory(Model model) {
+	model.addAttribute("historyList", textRepo.findAll());
+	return "history";
+	}
 }

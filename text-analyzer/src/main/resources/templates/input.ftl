@@ -20,7 +20,7 @@
 <#if list??>
 <ul class="list-group">
 </ul>
-<li class="list-group-item active">Text analysis by last word letter</li>
+<li class="list-group-item active">Text analysis by last word letter (last letter, number of words, words)</li>
 <#list list?ifExists as lastLetter>
 <li class="list-group-item">${lastLetter.lastLetter} ${lastLetter.wordsNumber}<#list lastLetter.words as word> ${word} </#list></li>
 </#list>
