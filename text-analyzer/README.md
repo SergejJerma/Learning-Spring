@@ -38,6 +38,11 @@ Result:
 e 5 state mate mate late fatE
 b 2 web lab 
 ```
+### Teksto analizės algoritmas
+* tikrinama, ar tekste yra dvigubų (ir didesnių) tarpų, jei taip, jie pakeičiami į viengubus
+* tekstas išskiriamas į žodžius
+* atmetami žodžiai, kurie turi nelotyškos abėcėlės simbolių
+* žodžiai grupuojami pagal paskutinę raidę (case-insensitive)
 
 ### Papildoma informacija
 
