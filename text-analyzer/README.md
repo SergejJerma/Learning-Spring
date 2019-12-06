@@ -32,8 +32,11 @@ state mate web mate lab 4fun late fatE
 ```
 gaunamas rezultatas
 ```
+Request:
+state mate web mate lab 4fun late fatE
+Result:
+e 5 state mate mate late fatE
 b 2 web lab 
-e 5 state mate mate late fatE 
 ```
 
 ### Papildoma informacija
