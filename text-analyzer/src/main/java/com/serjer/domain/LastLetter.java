@@ -27,6 +27,8 @@ public class LastLetter {
 	@JoinColumn(name = "text_id")
 	private Text text;
 	
+	private int wordsNumber;
+	
 	@ElementCollection(fetch = FetchType.EAGER)
 	@CollectionTable(name = "words", joinColumns = @JoinColumn(name = "last_letter_id"))
 	private List<String> words;
@@ -35,12 +37,17 @@ public class LastLetter {
 		super();
 	}
 
-	public LastLetter(String lastLetter, Text text, List<String> words) {
+
+
+	public LastLetter(String lastLetter, Text text, int wordsNumber, List<String> words) {
 		super();
 		this.lastLetter = lastLetter;
 		this.text = text;
+		this.wordsNumber = wordsNumber;
 		this.words = words;
 	}
+
+
 
 	public Long getId() {
 		return id;
@@ -72,6 +79,18 @@ public class LastLetter {
 
 	public void setWords(List<String> words) {
 		this.words = words;
+	}
+
+
+
+	public int getWordsNumber() {
+		return wordsNumber;
+	}
+
+
+
+	public void setWordsNumber(int wordsNumber) {
+		this.wordsNumber = wordsNumber;
 	}
 	
 	

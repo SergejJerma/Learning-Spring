@@ -1,9 +1,6 @@
 package com.serjer.service;
 
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,32 +13,29 @@ import com.serjer.repo.TextRepo;
 
 
 @Service
-public class TextService {
+public class TextService extends Thread {
 	
+
 	@Autowired
 	private LastLetterRepo lastLetterRepo;
 	
 	@Autowired
 	private TextRepo textRepo;
 	
-	
-	public boolean isStringOnlyAlphabet(String word) {
-		return ((word != null) && (!word.equals("")) && (word.matches("^[a-zA-Z]*$")));
-	}
-
 	public void countWordsByLastLetter(String inputText) {
 		Text text = new Text(inputText);
 		textRepo.save(text);
 		
-		Map<String, List<String>> wordsByLastLetter = new HashMap<String, List<String>>();
-
-		wordsByLastLetter = Arrays.stream(inputText.replaceAll("^ +| +$|( )+", "$1").split(" "))
-				.filter(s -> isStringOnlyAlphabet(s))
-				.collect(Collectors.groupingBy(s -> String.valueOf(s.toLowerCase().charAt(s.length() - 1))));
-
-		wordsByLastLetter.entrySet().forEach(entry -> {
-			LastLetter letter = new LastLetter(entry.getKey(), text, entry.getValue());
-			lastLetterRepo.save(letter);
-		});
+		Arrays.stream(inputText.replaceAll("^ +| +$|( )+", "$1").split(" "))
+				.filter(s -> s.matches("^[a-zA-Z]*$"))
+				.collect(Collectors.groupingBy(s -> String.valueOf(s.toLowerCase().charAt(s.length() - 1))))
+				.entrySet()
+				.forEach(entry -> {
+					LastLetter letter = new LastLetter(entry.getKey(), 
+													   text, 
+													   entry.getValue().size(), 
+													   entry.getValue());
+					lastLetterRepo.save(letter);
+				});
 	}
 }

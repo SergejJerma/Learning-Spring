@@ -33,9 +33,9 @@ public class MainController {
 	}
 	
 	@PostMapping("/")
-	public String inputText(Model model, @RequestParam String text) {
-	textService.countWordsByLastLetter(text);
-	List <LastLetter> list = lastLetterRepo.findAll();
+	public String inputText(Model model, @RequestParam String inputText) {
+	textService.countWordsByLastLetter(inputText);
+	List <LastLetter> list = lastLetterRepo.findAllByTextTextBody(inputText);
 	model.addAttribute("list", list);
 		return "input";
 	}

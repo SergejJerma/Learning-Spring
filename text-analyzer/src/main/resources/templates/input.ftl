@@ -6,7 +6,7 @@
 			<div class="input-group-prepend">
 				<span class="input-group-text">Input text here:</span>
 			</div>
-			<textarea type="text" name="text" class="form-control" aria-label="Input text here:"></textarea>
+			<textarea type="text" name="inputText" class="form-control" aria-label="Input text here:"></textarea>
 
 		</div>
 		<br/>
@@ -18,8 +18,11 @@
 </div>
 </#if>
 <#if list??>
+<ul class="list-group">
+</ul>
+<li class="list-group-item active">Text analysis by last word letter</li>
 <#list list?ifExists as lastLetter>
-${lastLetter.lastLetter}
+<li class="list-group-item">${lastLetter.lastLetter} ${lastLetter.wordsNumber}<#list lastLetter.words as word> ${word} </#list></li>
 </#list>
 </#if>
 </@c.page>
