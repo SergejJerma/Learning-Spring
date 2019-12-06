@@ -38,7 +38,7 @@ e 5 state mate mate late fatE
 
 ### Papildoma informacija
 
-* 
+* Puslapio navigacijoje vartotojui numatyta galimybė peržiūrėti visą užklausų istoriją, kuri rodoma atskirame lange.
 
 ## Testai
 
