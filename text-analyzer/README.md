@@ -22,8 +22,8 @@ H2
 FreeMarker
 Bootstrap
 ```
-## Klasės/Ryšiai
-Programoje yra trys POJO klasės - Text, LastLetter. Duomenys saugomi H2 duoemnų bazėje.
+### Klasės/Ryšiai
+Programoje yra trys POJO klasės - Text, LastLetter. Duomenys saugomi H2 duomenų bazėje.
 * Text -> LastLetter(@OneToMany)
 
 ## Programos veikimas
