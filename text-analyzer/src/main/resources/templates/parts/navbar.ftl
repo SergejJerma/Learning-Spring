@@ -5,7 +5,12 @@
     </button>
     <ul class="navbar-nav mr-left">
             <li class="nav-item">
-                <a class="nav-link" href="/">Input</a>
+                <a class="nav-link" href="/">Input text</a>
+            </li>
+    </ul>
+    <ul class="navbar-nav mr-left">
+            <li class="nav-item">
+                <a class="nav-link" href="/upload">Upload file</a>
             </li>
     </ul>
     <ul class="navbar-nav mr-left">

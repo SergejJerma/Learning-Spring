@@ -6,7 +6,7 @@
 			<div class="input-group-prepend">
 				<span class="input-group-text">Input text here:</span>
 			</div>
-			<textarea type="text" name="inputText" class="form-control" aria-label="Input text here:"></textarea>
+			<textarea type="text" name="inputText" class="form-control" aria-label="Input text here:" required></textarea>
 
 		</div>
 		<br/>

@@ -49,11 +49,20 @@ class TextAnalyzerApplicationTests {
 	}
 	
 	@Test
-	void historyContextLoads() throws Exception {
+	void historyFormContextLoads() throws Exception {
 		this.mockMvc.perform(get("/history"))
 			.andDo(print())
 			.andExpect(status().isOk())
 			.andExpect(content().string(containsString("History")));
+	
+	}
+	
+	@Test
+	void uploadFormContextLoads() throws Exception {
+		this.mockMvc.perform(get("/upload"))
+			.andDo(print())
+			.andExpect(status().isOk())
+			.andExpect(content().string(containsString("Upload file")));
 	
 	}
 }

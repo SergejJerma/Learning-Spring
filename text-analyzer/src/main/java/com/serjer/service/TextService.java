@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 import com.serjer.domain.LastLetter;
@@ -23,7 +22,7 @@ public class TextService  {
 	@Autowired
 	private TextRepo textRepo;
 	
-	@Async
+	
 	public void countWordsByLastLetter(String inputText) {
 		Text text = new Text(inputText);
 		textRepo.save(text);
