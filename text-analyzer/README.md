@@ -1,6 +1,6 @@
 # Teksto analizatorius
 
-programa analizuoja įvestą tekstą pagal paskutines žodžių raides - atrenkami bei sugrupuojami tik lotyškos abecėlės žodžiai, kurie baigiasi ta pačia raide. 
+programa analizuoja puslapyje įvestą arba faile įkeltą tekstą pagal paskutines žodžių raides - atrenkami bei sugrupuojami tik lotyškos abecėlės žodžiai, kurie baigiasi ta pačia raide. 
 
 ## Pradžia
 
@@ -22,6 +22,9 @@ H2
 FreeMarker
 Bootstrap
 ```
+### Klasės/Ryšiai
+Programoje yra trys POJO klasės - Text, LastLetter. Duomenys saugomi H2 duomenų bazėje.
+* Text -> LastLetter(@OneToMany)
 
 ## Programos veikimas
 
@@ -46,7 +49,9 @@ b 2 web lab
 
 ### Papildoma informacija
 
-* Puslapio navigacijoje vartotojui numatyta galimybė peržiūrėti visą užklausų istoriją, kuri rodoma atskirame lange.
+Puslapio navigacijoje vartotojui numatytos galimybės:
+* įkelti failą su tekstu;
+* peržiūrėti visą užklausų istoriją, kuri rodoma atskirame lange.
 
 ## Testai
 
