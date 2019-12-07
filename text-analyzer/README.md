@@ -1,6 +1,6 @@
 # Teksto analizatorius
 
-programa analizuoja įvestą arba faile įkeltą tekstą pagal paskutines žodžių raides - atrenkami bei sugrupuojami tik lotyškos abecėlės žodžiai, kurie baigiasi ta pačia raide. 
+programa analizuoja puslapyje įvestą arba faile įkeltą tekstą pagal paskutines žodžių raides - atrenkami bei sugrupuojami tik lotyškos abecėlės žodžiai, kurie baigiasi ta pačia raide. 
 
 ## Pradžia
 
