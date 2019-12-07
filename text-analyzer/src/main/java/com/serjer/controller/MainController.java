@@ -28,7 +28,7 @@ public class MainController {
 	
 	@GetMapping("/")
 	public String main(Model model) {
-
+	
 	return "input";
 	}
 	
@@ -37,7 +37,7 @@ public class MainController {
 	textService.countWordsByLastLetter(inputText);
 	List <LastLetter> list = lastLetterRepo.findAllByTextTextBody(inputText);
 	model.addAttribute("list", list);
-		return "input";
+	return "input";
 	}
 	
 	@GetMapping("/history")
