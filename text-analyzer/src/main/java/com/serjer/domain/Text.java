@@ -1,9 +1,9 @@
 package com.serjer.domain;
 
-import java.util.Set;
-
+import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -18,19 +18,26 @@ public class Text {
 		
 	private String textBody;
 	
-	@OneToMany(mappedBy = "text", cascade = CascadeType.ALL)
-	private Set<LastLetter> lastLetters;
+	private String date;
+	
+	@OneToMany(mappedBy = "text", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	private List<LastLetter> lastLetters;
 
 	public Text() {
 		super();
 	}
 
-	public Text(String textBody) {
+
+
+	public Text(String textBody, String date) {
 		super();
 		this.textBody = textBody;
+		this.date = date;
 	}
 
-	public Text(String textBody, Set<LastLetter> lastLetters) {
+
+
+	public Text(String textBody, List<LastLetter> lastLetters) {
 		super();
 		this.textBody = textBody;
 		this.lastLetters = lastLetters;
@@ -52,13 +59,24 @@ public class Text {
 		this.textBody = textBody;
 	}
 
-	public Set<LastLetter> getLastLetters() {
+	public List<LastLetter> getLastLetters() {
 		return lastLetters;
 	}
 
-	public void setLastLetters(Set<LastLetter> lastLetters) {
+	public void setLastLetters(List<LastLetter> lastLetters) {
 		this.lastLetters = lastLetters;
 	}
+	
+
+	public String getDate() {
+		return date;
+	}
+
+	public void setDate(String date) {
+		this.date = date;
+	}
+
+
 
 	@Override
 	public int hashCode() {

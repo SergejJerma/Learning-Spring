@@ -48,7 +48,6 @@ public class MainController {
 	public String inputText(Model model, @RequestParam String inputText) {
 	textService.countWordsByLastLetter(inputText);
 	
-	//List <LastLetter> list = lastLetterRepo.findAllByTextTextBody(inputText);
 	List<LastLetter> list = StreamEx.of(lastLetterRepo.findAllByTextTextBody(inputText))
 			  .distinct(LastLetter::getLastLetter)
 			  .toList();
