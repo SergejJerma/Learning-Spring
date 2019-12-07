@@ -5,7 +5,7 @@ programa analizuoja puslapyje įvestą arba faile įkeltą tekstą pagal paskuti
 ## Pradžia
 
 Servisas paleidžiamas iš .jar failo
-* [analyzer.jar](https://) 
+* [analyzer.jar](https://we.tl/t-LlTZN63zl6) 
 ```
 java -jar analyzer.jar
 ```
