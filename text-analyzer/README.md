@@ -50,6 +50,15 @@ e 5 state mate mate late fatE
 Puslapio navigacijoje vartotojui numatytos galimybės:
 * įkelti failą su tekstu;
 * peržiūrėti visą užklausų istoriją, kuri rodoma atskirame lange.
+```
+History
+Input text (2019-12-07 20:49:11):
+state mate web mate lab 4fun late fatE
+
+Analysis:
+b 2 web lab
+e 5 state mate mate late fatE 
+```
 
 ## Testai
 
