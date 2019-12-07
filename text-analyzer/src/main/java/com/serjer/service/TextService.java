@@ -13,7 +13,7 @@ import com.serjer.repo.TextRepo;
 
 
 @Service
-public class TextService extends Thread {
+public class TextService  {
 	
 
 	@Autowired
