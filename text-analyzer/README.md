@@ -5,7 +5,7 @@ programa analizuoja puslapyje įvestą arba faile įkeltą tekstą pagal paskuti
 ## Pradžia
 
 Servisas paleidžiamas iš .jar failo
-* [analyzer.jar](https://) 
+* [analyzer.jar](https://we.tl/t-LlTZN63zl6) 
 ```
 java -jar analyzer.jar
 ```
@@ -23,7 +23,7 @@ FreeMarker
 Bootstrap
 ```
 ### Klasės/Ryšiai
-Programoje yra trys POJO klasės - Text, LastLetter. Duomenys saugomi H2 duomenų bazėje.
+Programoje yra dvi POJO klasės - Text, LastLetter. Duomenys saugomi H2 duomenų bazėje.
 * Text -> LastLetter(@OneToMany)
 
 ## Programos veikimas
@@ -35,11 +35,9 @@ state mate web mate lab 4fun late fatE
 ```
 gaunamas rezultatas
 ```
-Request:
-state mate web mate lab 4fun late fatE
-Result:
-e 5 state mate mate late fatE
-b 2 web lab 
+Text analysis by last word letter (last letter, number of words, words)
+b 2 web lab
+e 5 state mate mate late fatE 
 ```
 ### Teksto analizės algoritmas
 * tikrinama, ar tekste yra dvigubų (ir didesnių) tarpų, jei taip, jie pakeičiami į viengubus
@@ -52,6 +50,15 @@ b 2 web lab
 Puslapio navigacijoje vartotojui numatytos galimybės:
 * įkelti failą su tekstu;
 * peržiūrėti visą užklausų istoriją, kuri rodoma atskirame lange.
+```
+History
+Input text (2019-12-07 20:49:11):
+state mate web mate lab 4fun late fatE
+
+Analysis:
+b 2 web lab
+e 5 state mate mate late fatE 
+```
 
 ## Testai
 
