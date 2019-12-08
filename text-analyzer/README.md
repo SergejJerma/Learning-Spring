@@ -48,7 +48,7 @@ e 5 state mate mate late fatE
 ### Papildoma informacija
 
 Puslapio navigacijoje vartotojui numatytos galimybės:
-* įkelti failą su tekstu;
+* įkelti failą su tekstu (failai saugojami C:/upload/);
 * peržiūrėti visą užklausų istoriją, kuri rodoma atskirame lange.
 ```
 History
