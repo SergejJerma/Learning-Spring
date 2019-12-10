@@ -1,4 +1,4 @@
-# * [perkelta](https://github.com/SergejJerma/Text-Analyzer) 
+# [perkelta](https://github.com/SergejJerma/Text-Analyzer) 
 
 
 
